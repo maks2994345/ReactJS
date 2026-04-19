@@ -1,0 +1,92 @@
+import {topicList} from "./topicList.js";
+
+export const cardList = [
+    {
+        id: 1,
+        theme: 'Web Design',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Без статуса'
+    },
+
+    {
+        id: 2,
+        theme: 'Research',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Без статуса',
+        topic: topicList[0].topic,
+    },
+
+    {
+        id: 3,
+        theme: 'Copywriting',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Без статуса'
+    },
+
+    {
+        id: 4,
+        theme: 'Research',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Без статуса'
+    },
+
+    {
+        id: 5,
+        theme: 'Web Design',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Без статуса'
+    },
+
+    {
+        id: 6,
+        theme: 'Research',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Нужно сделать'
+    },
+
+    {
+        id: 7,
+        theme: 'Copywriting',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'В работе'
+    },
+
+    {
+        id: 8,
+        theme: 'Research',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'В работе'
+    },
+
+    {
+        id: 9,
+        theme: 'Copywriting',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'В работе'
+    },
+
+    {
+        id: 10,
+        theme: 'Research',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Тестирование'
+    },
+
+    {
+        id: 11,
+        theme: 'Research',
+        title: 'Название задачи',
+        date: '30.10.23',
+        status: 'Готово'
+    }
+]
