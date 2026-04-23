@@ -1,17 +1,24 @@
 import Calendar from "../Calendar/Calendar.jsx";
+import {
+    SPopBrowse,
+    SPopBrowseBlock,
+    SPopBrowseContainer,
+    SPopBrowseContent, SPopBrowseTitle,
+    SPopBrowseTopBlock
+} from "./PopBrowse.styled.js";
 
 function PopBrowse() {
     return (
-        <div className="pop-browse" id="popBrowse">
-            <div className="pop-browse__container">
-                <div className="pop-browse__block">
-                    <div className="pop-browse__content">
-                        <div className="pop-browse__top-block">
-                            <h3 className="pop-browse__ttl">Название задачи</h3>
+        <div class="pop-browse" id="popBrowse">
+            <SPopBrowseContainer>
+                <SPopBrowseBlock>
+                    <SPopBrowseContent>
+                        <SPopBrowseTopBlock>
+                            <SPopBrowseTitle>Название задачи</SPopBrowseTitle>
                             <div className="categories__theme theme-top _orange _active-category">
                                 <p className="_orange">Web Design</p>
                             </div>
-                        </div>
+                        </SPopBrowseTopBlock>
                         <div className="pop-browse__status status">
                             <p className="status__p subttl">Статус</p>
                             <div className="status__themes">
@@ -96,10 +103,9 @@ function PopBrowse() {
                             </div>
                             <button className="btn-edit__close _btn-bg _hover01"><a href="#">Закрыть</a></button>
                         </div>
-
-                    </div>
-                </div>
-            </div>
+                    </SPopBrowseContent>
+                </SPopBrowseBlock>
+            </SPopBrowseContainer>
         </div>
     )
 }
