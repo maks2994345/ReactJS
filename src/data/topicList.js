@@ -1,6 +1,5 @@
-export const topicList = [
-    {
-        "Web design": {
+export const topicList = {
+        "Web Design": {
             backgroundColor: '#FFE4C2',
             color: '#FF6D00',
         },
@@ -15,4 +14,3 @@ export const topicList = [
             color: '#9A48F1',
         }
     }
-]

@@ -1,15 +1,15 @@
 import Column from "../Column/Column.jsx";
 import {statusList} from "../../data/statusList.js";
-import {cardList} from "../../data/data.js";
+import {SMain, SMainBlock, SMainContent} from "./Main.styled.js";
 
 function Main({cards}) {
     return (
-        <main className="main">
+        <SMain>
             <div className="container">
-                <div className="main__block">
+                <SMainBlock>
                     <div className="container">
-                        <div className="main__block">
-                            <div className="main__content">
+                        <SMainBlock>
+                            <SMainContent>
                                 {
                                     statusList.map((item, index) => {
                                         const filteredCards = cards.filter((card) => {
@@ -20,12 +20,12 @@ function Main({cards}) {
                                         )
                                     })
                                 }
-                            </div>
-                        </div>
+                            </SMainContent>
+                        </SMainBlock>
                     </div>
-                </div>
+                </SMainBlock>
             </div>
-        </main>
+        </SMain>
 
     )
 }

@@ -1,5 +1,3 @@
-import {topicList} from "./topicList.js";
-
 export const cardList = [
     {
         id: 1,
@@ -15,7 +13,6 @@ export const cardList = [
         title: 'Название задачи',
         date: '30.10.23',
         status: 'Без статуса',
-        topic: topicList[0].topic,
     },
 
     {

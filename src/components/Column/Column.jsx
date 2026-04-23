@@ -1,20 +1,20 @@
 import Card from "../Card/Card.jsx";
-import card from "../Card/Card.jsx";
+import {SColumnTitle, SMainColumn} from "./Column.styled.js";
 
 function Column({title, cards}) {
     return (
-        <div className="main__column column">
-            <div className="column__title">
+        <SMainColumn>
+            <SColumnTitle>
                 <p>{title}</p>
-            </div>
+            </SColumnTitle>
             {
                 cards.map((item) => {
                     return (
-                        <Card key={item.id} theme={item.theme} title={item.title} date={item.date} topic={item.topic}/>
+                        <Card key={item.id} theme={item.theme} title={item.title} date={item.date}/>
                     )
                 })
             }
-        </div>
+        </SMainColumn>
     )
 }
 
