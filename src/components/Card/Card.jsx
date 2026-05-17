@@ -1,8 +1,17 @@
 import {
     SCardBtn, SCardContent, SCardDate, SCardGroup, SCards, SCardsCard, SCardsItem, SCardTheme, SCardTitle
 } from "./Card.styled.js";
+import PopBrowse from "../PopBrowse/PopBrowse.jsx";
+import {useNavigate} from "react-router-dom";
 
 function Card({id, title, date, theme}) {
+
+    const navigate = useNavigate();
+
+    const handlePopBrowse = () => {
+        navigate(`/card/${id}`)
+    }
+
     return (
         <SCards>
         <SCardsItem>
@@ -11,8 +20,8 @@ function Card({id, title, date, theme}) {
                     <SCardTheme $topicColor={theme}>
                         <p>{theme}</p>
                     </SCardTheme>
-                    <a href="#popBrowse" target="_self">
-                        <SCardBtn>
+                    <a>
+                        <SCardBtn onClick={handlePopBrowse}>
                             <div></div>
                             <div></div>
                             <div></div>

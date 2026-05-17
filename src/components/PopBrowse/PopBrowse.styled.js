@@ -1,12 +1,12 @@
 import styled from "styled-components";
+import {topicList} from "../../data/topicList.js";
 
 export const SPopBrowse = styled.div`
-    display: none;
     width: 100%;
     height: 100%;
     min-width: 375px;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 7;
@@ -70,4 +70,174 @@ export const SPopBrowseTitle = styled.h3`
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+`
+
+export const SCategoriesTheme = styled.div`
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    margin-right: 7px;
+    background-color: ${({$topicColor}) => topicList[$topicColor].backgroundColor || 'gray'} ;
+
+    p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px;
+        white-space: nowrap;
+        color: ${({$topicColor}) => topicList[$topicColor].color || 'gray'}
+    }
+    
+    // opacity: 1 !important
+`
+
+export const SPopBrowseStatus = styled.div`
+    margin-bottom: 11px;
+`
+
+export const SStatus = styled.p`
+    margin-bottom: 14px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+`
+
+export const SStatusThemes = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+`
+
+export const SStatusTheme = styled.div`
+    border-radius: 24px;
+    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    color: #94A6BE;
+    padding: 11px 14px 10px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    
+    p {
+        font-size: 14px;
+        line-height: 1;
+        letter-spacing: -0.14px;
+    }
+`
+
+export const SPopBrowseWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    //@media screen and (max-width: 660px)
+    //display: block
+`
+
+export const SPopBrowseForm = styled.form`
+    max-width: 370px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    
+    //@media screen and (max-width: 495px)
+    //max-width: 100%
+`
+
+export const SFormBrowseBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+export const SLabel = styled.label`
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+`
+
+export const SFormBrowseArea = styled.textarea`
+    max-width: 370px;
+    width: 100%;
+    outline: none;
+    padding: 14px;
+    background: #EAEEF6;
+    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    margin-top: 14px;
+    height: 200px;
+    
+    &::-moz-placeholder{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1px;
+        color: #94A6BE;
+        letter-spacing: -0.14px;
+    }
+    
+    &::placeholder{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1px;
+        color: #94A6BE;
+        letter-spacing: -0.14px;
+    }
+    
+    //@media screen and (max-width: 495px)
+    // max-width: 100%;
+    
+    //@media screen and (max-width: 495px)
+    //height: 37px
+`
+
+export const SThemeDown = styled.div`
+    display: none;
+    margin-bottom: 20px;
+`
+
+export const SPopBrowseBtnBrowse = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    button {
+        height: 30px;
+        margin-bottom: 10px;
+        padding: 0 14px;
+        margin-right: 8px;
+    }
+`
+
+export const SPopBrowseBtnGroup = styled.div`
+    margin-right: 8px
+`
+
+export const SButtonBrd = styled.button`
+    border-radius: 4px;
+    border: 0.7px solid var(--palette-navy-60, #565EEF);
+    outline: none;
+    background: transparent;
+    color: #565EEF;
+    
+    &:hover {
+        background-color: #33399b;
+        color: #FFFFFF;
+    }
+`
+
+export const SBtnBg = styled.button`
+    border-radius: 4px;
+    background: #565EEF;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    
+    &:hover {
+        background-color: #33399b;
+    }
 `

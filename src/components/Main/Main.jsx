@@ -1,13 +1,14 @@
 import Column from "../Column/Column.jsx";
 import {statusList} from "../../data/statusList.js";
 import {SMain, SMainBlock, SMainContent} from "./Main.styled.js";
+import {Container} from "../../GlobalStyle.js";
 
 function Main({cards}) {
     return (
         <SMain>
-            <div className="container">
+            <Container>
                 <SMainBlock>
-                    <div className="container">
+                    <Container>
                         <SMainBlock>
                             <SMainContent>
                                 {
@@ -22,9 +23,9 @@ function Main({cards}) {
                                 }
                             </SMainContent>
                         </SMainBlock>
-                    </div>
+                    </Container>
                 </SMainBlock>
-            </div>
+            </Container>
         </SMain>
 
     )

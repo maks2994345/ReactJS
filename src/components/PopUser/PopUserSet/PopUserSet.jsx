@@ -6,9 +6,16 @@ import {
     SPopUserSetName,
     SPopUserSetTheme
 } from "./PopUserSet.styled.js";
+import {useNavigate} from "react-router-dom";
 
 function PopUserSet() {
     const [isVisible, setIsVisible] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleExit = () => {
+        navigate("/exit")
+    }
 
     return (
         <>
@@ -22,8 +29,8 @@ function PopUserSet() {
                             <p>Темная тема</p>
                             <input type="checkbox" className="checkbox" name="checkbox"/>
                         </SPopUserSetTheme>
-                        <SPopUserSetButton>
-                            <a href="#popExit">Выйти</a>
+                        <SPopUserSetButton onClick={handleExit}>
+                            <a>Выйти</a>
                         </SPopUserSetButton>
                     </SPopUserSet>
                 ) : null
