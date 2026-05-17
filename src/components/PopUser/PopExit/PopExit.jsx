@@ -6,10 +6,22 @@ import {
     SPopExitForm,
     SPopExitFormGroup
 } from "./PopExit.styled.js";
+import {Link, useNavigate} from "react-router-dom";
+import {useState} from "react";
 
-function PopExit(){
+function PopExit({setIsAuth}) {
+    const navigate = useNavigate()
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        setIsAuth(false);
+        navigate("/sign-in")
+    }
+
+    const [isOpen, setIsOpen] = useState(false);
+
     return(
-        <div className="pop-exit" id="popExit">
+        <SPopExit>
             <SPopExitContainer>
                 <SPopExitBlock>
                     <SPopExitBlockTitle>
@@ -17,17 +29,17 @@ function PopExit(){
                     </SPopExitBlockTitle>
                     <SPopExitForm>
                         <SPopExitFormGroup>
-                            <SPopExitButtonYes>
-                                <a href="modal/signin.html">Да, выйти</a>
+                            <SPopExitButtonYes onClick={handleLogout}>
+                                <a>Да, выйти</a>
                             </SPopExitButtonYes>
                             <SPopExitButtonNo>
-                                <a href="main.html">Нет, остаться</a>
+                               <Link to="/"><a>Нет, остаться</a></Link>
                             </SPopExitButtonNo>
                         </SPopExitFormGroup>
                     </SPopExitForm>
                 </SPopExitBlock>
             </SPopExitContainer>
-        </div>
+        </SPopExit>
     )
 }
 

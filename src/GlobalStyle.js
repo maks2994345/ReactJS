@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import styled, {createGlobalStyle} from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -25,19 +25,19 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Roboto", Arial, Helvetica, sans-serif;
         color: #000000;
     }
+`
 
-    .wrapper {
-        max-width: 100%;
-        width: 100vw;
-        min-height: 100vh;
-        overflow: hidden;
-        background-color: #F1F1F1;
-    }
+export const Wrapper = styled.div`
+    max-width: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #F1F1F1;
+`
 
-    .container {
-        max-width: 1260px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 30px;
-    }
+export const Container = styled.div`
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
 `

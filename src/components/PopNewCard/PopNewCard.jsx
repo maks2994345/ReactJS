@@ -1,27 +1,41 @@
 import Calendar from "../Calendar/Calendar.jsx";
+import {
+    SFormNewBlock, SLabel,
+    SPopNewCard,
+    SPopNewCardBlock, SPopNewCardClose,
+    SPopNewCardContainer,
+    SPopNewCardContent, SPopNewCardForm,
+    SPopNewCardTitle, SPopNewCardWrap
+} from "./PopNewCard.styled.js";
+import {useNavigate} from "react-router-dom";
 
-function PopBrowse() {
+function PopNewCard() {
+    const navigate = useNavigate();
+    const handleClose = () => {
+        navigate("/");
+    }
+
     return (
-        <div className="pop-new-card" id="popNewCard">
-            <div className="pop-new-card__container">
-                <div className="pop-new-card__block">
-                    <div className="pop-new-card__content">
-                        <h3 className="pop-new-card__ttl">Создание задачи</h3>
-                        <a href="#" className="pop-new-card__close">&#10006;</a>
-                        <div className="pop-new-card__wrap">
-                            <form className="pop-new-card__form form-new" id="formNewCard" action="#">
-                                <div className="form-new__block">
-                                    <label htmlFor="formTitle" className="subttl">Название задачи</label>
+        <SPopNewCard>
+            <SPopNewCardContainer>
+                <SPopNewCardBlock>
+                    <SPopNewCardContent>
+                        <SPopNewCardTitle>Создание задачи</SPopNewCardTitle>
+                        <SPopNewCardClose onClick={handleClose}>&#10006;</SPopNewCardClose>
+                        <SPopNewCardWrap>
+                            <SPopNewCardForm>
+                                <SFormNewBlock>
+                                    <SLabel htmlFor="formTitle">Название задачи</SLabel>
                                     <input className="form-new__input" type="text" name="name" id="formTitle"
                                            placeholder="Введите название задачи..."
                                            autoFocus/>
-                                </div>
+                                </SFormNewBlock>
                                 <div className="form-new__block">
                                     <label htmlFor="textArea" className="subttl">Описание задачи</label>
                                     <textarea className="form-new__area" name="text" id="textArea"
                                               placeholder="Введите описание задачи..."></textarea>
                                 </div>
-                            </form>
+                            </SPopNewCardForm>
                             <div className="pop-new-card__calendar calendar">
                                 <p className="calendar__ttl subttl">Даты</p>
                                 <div className="calendar__block">
@@ -50,7 +64,7 @@ function PopBrowse() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </SPopNewCardWrap>
                         <div className="pop-new-card__categories categories">
                             <p className="categories__p subttl">Категория</p>
                             <div className="categories__themes">
@@ -66,11 +80,11 @@ function PopBrowse() {
                             </div>
                         </div>
                         <button className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </SPopNewCardContent>
+                </SPopNewCardBlock>
+            </SPopNewCardContainer>
+        </SPopNewCard>
     )
 }
 
-export default PopBrowse;
+export default PopNewCard;

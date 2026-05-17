@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const SHeaderUser = styled.div`
+    height: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #565EEF;
+`
+
 export const SPopUserSet = styled.div`
     display: block;
     position: absolute;
